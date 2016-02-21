@@ -12,8 +12,11 @@ call plug#end()
 " Maps escape to jk
 inoremap jk <ESC>
 
-"Changes Leaders to spacebark
+"Changes Leaders to space bar
 let mapleader = "\<Space>"
+
+"Leader turn off search highlights
+nnoremap <leader>h set hlsearch!
 
 " required for vim airline
 set laststatus=2
@@ -88,3 +91,9 @@ let g:airline_powerline_fonts = 1
 
 " NERDTree Toggle 
 map <C-n> :NERDTreeToggle<CR>
+
+" Enable spell checking
+set spell
+set spell spelllang=en_us
+nnoremap <leader>f 1z=
+nnoremap <leader>s :set spell!
