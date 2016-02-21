@@ -9,6 +9,12 @@ Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
+" Maps escape to jk
+inoremap jk <ESC>
+
+"Changes Leaders to spacebark
+let mapleader = "\<Space>"
+
 " required for vim airline
 set laststatus=2
 let g:airline_powerline_fonts = 1
