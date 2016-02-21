@@ -1,0 +1,84 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Valloric/YouCompleteMe', { 'do': 'python2.7 ./install.py' }
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdtree'
+
+call plug#end()
+
+" required for vim airline
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline_theme = "murmur"
+
+" Dealing with white spaces
+set list
+set listchars=tab:▸\ ,trail:▫
+set number
+
+" spaces not tabs
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+set nowrap
+
+" supposedly changes stuff based on filetype
+filetype on
+filetype plugin on
+
+" fixes colors for dark background
+set background=dark
+
+" case insensitive search
+set ignorecase
+set smartcase
+
+" Syntax highlighting
+syntax on
+
+" autoindent
+filetype indent on
+set autoindent
+
+" Highlight search
+set hlsearch
+set incsearch
+
+" Highlight search off
+:nmap <leader>q :nohlsearch<CR>
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
+
+" syntastic
+let g:syntastic_check_on_open=1
+let g:syntastic_python_checkers=["pep8"] " pylint, flake8
+let g:syntastic_always_populate_loc_list=1
+
+
+" persistent undo
+set undofile
+set undodir=~/.vim/vim-undo
+
+" keeps *.swp out of working dir
+set backupdir=~/.vim/vim-tmp
+set directory=~/.vim/vim-tmp
+
+" Enable basic mouse behavior such as resizing buffers.
+" set mouse=a
+" set mouse to work in all but insert mode
+set mouse=nvc
+if !has('nvim')
+    if exists('$TMUX')  " Support resizing in tmux
+        set ttymouse=xterm2
+    endif
+endif
+
+" vim-airline
+let g:airline_powerline_fonts = 1
+
+" NERDTree Toggle 
+map <C-n> :NERDTreeToggle<CR>

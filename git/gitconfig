@@ -1,0 +1,7 @@
+[core]
+	excludesfile = /home/aaronde/.dotfiles/git/gitignore_global
+[user]
+	email = aaron.dershem@blackbaud.com
+    name = Aaron Dershem
+[push]
+    default = simple
