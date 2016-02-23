@@ -86,14 +86,11 @@ if !has('nvim')
     endif
 endif
 
-" vim-airline
-let g:airline_powerline_fonts = 1
-
-" NERDTree Toggle 
+" NERDTree Toggle
 map <C-n> :NERDTreeToggle<CR>
 
 " Enable spell checking
 " set spell
 " set spell spelllang=en_us
 nnoremap <leader>f 1z=
-nnoremap <leader>s :set spell!
+nnoremap <leader>s :set spell!<CR>
