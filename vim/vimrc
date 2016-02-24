@@ -16,7 +16,7 @@ inoremap jk <ESC>
 let mapleader = "\<Space>"
 
 "Leader turn off search highlights
-nnoremap <leader>h set hlsearch!
+nnoremap <leader>h :set hlsearch!<CR>
 
 " required for vim airline
 set laststatus=2
@@ -57,8 +57,6 @@ set autoindent
 set hlsearch
 set incsearch
 
-" Highlight search off
-:nmap <leader>q :nohlsearch<CR>
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 
