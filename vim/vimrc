@@ -6,6 +6,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'Valloric/YouCompleteMe', { 'do': 'python2.7 ./install.py' }
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 
@@ -58,7 +59,7 @@ set hlsearch
 set incsearch
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
-set t_Co=256
+"set t_Co=256
 
 " syntastic
 let g:syntastic_check_on_open=1
@@ -71,8 +72,8 @@ set undofile
 set undodir=~/.vim/vim-undo
 
 " keeps *.swp out of working dir
-set backupdir=~/.vim/vim-tmp
-set directory=~/.vim/vim-tmp
+set backupdir=~/.vim/vim-tmp//
+set directory=~/.vim/vim-tmp//
 
 " Enable basic mouse behavior such as resizing buffers.
 " set mouse=a
@@ -92,3 +93,10 @@ map <C-n> :NERDTreeToggle<CR>
 " set spell spelllang=en_us
 nnoremap <leader>f 1z=
 nnoremap <leader>s :set spell!<CR>
+
+" Solarized
+syntax enable
+set background=dark
+colorscheme solarized
+
+let g:solarized_termcolors=256
