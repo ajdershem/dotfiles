@@ -7,6 +7,11 @@ Plug 'Valloric/YouCompleteMe', { 'do': 'python2.7 ./install.py' }
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'altercation/vim-colors-solarized'
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-vinegar'
+Plug 'alvan/vim-closetag'
+Plug 'deris/vim-duzzle'
 
 call plug#end()
 
@@ -23,6 +28,8 @@ nnoremap <leader>h :set hlsearch!<CR>
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "murmur"
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
 
 " Dealing with white spaces
 set list
@@ -100,3 +107,10 @@ set background=dark
 colorscheme solarized
 
 let g:solarized_termcolors=256
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<c-e>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+
+" Show full path
+"set statusline+=%F

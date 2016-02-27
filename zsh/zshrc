@@ -6,12 +6,13 @@ eval `dircolors ~/.dircolors`
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
+# Optionally, if you set this to emotty.zsh-theme command not found: emotty"random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
 #ZSH_THEME="dersh"
 #ZSH_THEME="random"
+#ZSH_THEME="emotty"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -55,7 +56,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git tmux emoji emoji2 emotty)
 
 # User configuration
 
@@ -88,6 +89,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# tmux
+alias tmux='tmux -2'
+if [[ ! -n $SSH_CONNECTION ]]; then
+    if [ "$TMUX" = "" ]; then tmux; fi
+fi
 
 # set vi mode
 bindkey -v
