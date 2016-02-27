@@ -9,10 +9,10 @@ eval `dircolors ~/.dircolors`
 # Optionally, if you set this to emotty.zsh-theme command not found: emotty"random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
 #ZSH_THEME="dersh"
 #ZSH_THEME="random"
-#ZSH_THEME="emotty"
+ZSH_THEME="emotty"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
