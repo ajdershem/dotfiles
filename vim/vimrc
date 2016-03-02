@@ -6,12 +6,15 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'Valloric/YouCompleteMe', { 'do': 'python2.7 ./install.py' }
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree-git-plugin'
 Plug 'altercation/vim-colors-solarized'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-vinegar'
 Plug 'alvan/vim-closetag'
 Plug 'deris/vim-duzzle'
+Plug 'mhinz/vim-signify'
+Plug 'edkolev/tmuxline.vim'
 
 call plug#end()
 
